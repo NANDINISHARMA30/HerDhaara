@@ -3,12 +3,12 @@ import React from "react";
 export default function LiveClassPage() {
   return (
     <div className="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark min-h-screen text-white">
+      
       {/* HEADER */}
       <header className="sticky top-0 z-10 w-full border-b border-black/10 dark:border-white/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
         <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-3">
           <div className="flex items-center gap-4">
             <div className="text-primary size-7">
-              {/* Logo */}
               <svg fill="none" viewBox="0 0 48 48">
                 <path
                   d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736C36.9144 31.2278 39.9967 32.7669 41.3563 33.8352L24.8486 7.36089C24.4571 6.73303 23.5429 6.73303 23.1514 7.36089L6.64374 33.8352C8.00331 32.7669 11.0856 31.2278 13.8261 30.5736Z"
@@ -28,7 +28,6 @@ export default function LiveClassPage() {
               Home
             </a>
 
-            {/* Profile */}
             <button className="flex h-10 w-10 items-center justify-center rounded-full bg-surface-light dark:bg-surface-dark shadow-sm">
               <span className="material-symbols-outlined text-2xl">person</span>
             </button>
@@ -39,20 +38,28 @@ export default function LiveClassPage() {
       {/* MAIN */}
       <main className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
           {/* LEFT: VIDEO SECTION */}
           <div className="lg:col-span-2">
-            <div className="relative aspect-video w-full rounded-xl overflow-hidden bg-gray-900 shadow-lg">
-              <div
-                className="w-full h-full bg-center bg-cover"
-                style={{
-                  backgroundImage:
-                    "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBxp5LemMrW6UjsGPpaG4D8R0k0hfh75ULhoL_R4Ss3OJ2yP4k2sU0Mek58ikNHQj2Qlg4UG9b4R_QO08b-1SS2pIMGvpbWjJUE7eSSbO6W-KjXTXC8xrPmIaIOrAcsIqevMR2Pd9esnpPZ09ijy1CcsNHzNZSoV3lQt8yaxjNI1ztOzFmvPR-tg-JAuGG7xIM1AGr0KPJg4lJle4FH53FJ6SEGcA4vEuzhA6N15eW5g4r3QGq7oVJqY_hyispRqVkaYj4QgkIIfV7f')",
-                }}
-              ></div>
 
+            {/* VIDEO CONTAINER */}
+            <div className="relative aspect-video w-full rounded-xl overflow-hidden bg-black shadow-lg">
+
+              {/* YOUTUBE VIDEO */}
+       <iframe
+  className="w-full h-full"
+  src="https://www.youtube.com/embed/IbcYNtZ8HZY?autoplay=1&mute=1&controls=1&rel=0&modestbranding=1&playsinline=1"
+  title="YouTube video player"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+
+              {/* GRADIENT OVERLAY */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
 
-              {/* VIDEO CONTROLS */}
+              {/* VIDEO CONTROLS UI */}
               <div className="absolute inset-x-0 bottom-0 p-4 sm:p-6 text-white">
                 <div className="w-full group">
                   <div className="relative h-2 w-full cursor-pointer">
@@ -148,7 +155,6 @@ export default function LiveClassPage() {
             </div>
 
             <div className="flex-grow p-4 space-y-4 overflow-y-auto h-96">
-              {/* Chat message */}
               {[
                 {
                   name: "Sita",
@@ -179,6 +185,7 @@ export default function LiveClassPage() {
               ))}
             </div>
           </div>
+
         </div>
       </main>
     </div>

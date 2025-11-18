@@ -1,7 +1,7 @@
 // Dashboard.jsx
 import React from "react";
 
-export default function Dashboard() {
+export default function onboarding() {
   return (
     <div className="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden font-display bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
       

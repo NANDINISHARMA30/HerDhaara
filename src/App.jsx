@@ -5,7 +5,8 @@ import Catalog from "./pages/catalog.jsx";
 import TeacherProfile from "./pages/TeachingProfile.jsx";
 import LiveClassPage from "./pages/Live session.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
-import UserManagement from "./pages/UserManagement.jsx";
+import UserManagement from "./pages/Admin/UserManagement.jsx";
+import Onboarding from "./pages/Onboarding.jsx";
 
 
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/teacher" element={<TeacherProfile/>} />
         <Route path="/catalog" element={<Catalog/>} />
         <Route path="/class" element={<LiveClassPage/>} />
+        <Route path="/onboarding" element={<Onboarding/>} />
         
 
       </Routes>

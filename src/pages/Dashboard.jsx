@@ -1,97 +1,11 @@
 import React from "react";
+import Sidebar from "./Sidebar.jsx";
 
 export default function Dashboard() {
   return (
+    <div className="flex h-screen bg-off-white dark:bg-black">
+      <Sidebar />
     <div className="font-display bg-off-white dark:bg-background-dark min-h-screen flex">
-      {/* Sidebar */}
-      <aside className="flex h-screen min-w-[280px] max-w-[280px] flex-col justify-between bg-white dark:bg-background-dark p-4 border-r border-light-grey/50 dark:border-white/10 sticky top-0">
-
-        {/* Logo */}
-        <div className="flex flex-col gap-6">
-          <div className="flex gap-3 items-center px-3 pt-2">
-            <div
-              className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
-              style={{
-                backgroundImage:
-                  "url('https://lh3.googleusercontent.com/aida-public/AB6AXuByDz3TeMSFCqa6FfChstsenpWA2xo-FtzuD9_LTu3xWxqV5xxaU0mUumOPorCUcJT671erq13Lk8FS9iqoC2WUOpMYLc2leA21mKpbOACLq1BtnZwOxFtL_IXuOhq13DSotMQ627g8QZHkAvp67kbpzZHR2UlZq8qcS4G03ReDccEfr-Kz_MOCQG9_zyaVi4s54YXwVly3OTrMB00XcWBmKpOUCAtuR75U1sEasooP9FMzGN9vnfmuDdCxDnRRzjoeYj3nwr-d73x3')",
-              }}
-            ></div>
-
-            <div className="flex flex-col">
-              <h1 className="text-deep-purple dark:text-off-white text-base font-medium leading-normal">
-                HerDhara
-              </h1>
-              <p className="text-deep-purple/70 dark:text-off-white/70 text-sm">
-                Empowering Women
-              </p>
-            </div>
-          </div>
-
-          {/* Navigation */}
-          <nav className="flex flex-col gap-2">
-            {[
-              ["home", "Home", true],
-              ["school", "E-Learning"],
-              ["star", "Talent Showcase"],
-              ["work", "Opportunities"],
-              ["forum", "Community Chat"],
-            ].map(([icon, label, active], i) => (
-              <a
-                key={i}
-                className={`flex items-center gap-3 px-3 py-2 rounded-full ${
-                  active
-                    ? "bg-lilac/20 dark:bg-primary/20"
-                    : "hover:bg-lilac/20 dark:hover:bg-primary/20"
-                }`}
-                href="#"
-              >
-                <span className="material-symbols-outlined text-deep-purple dark:text-off-white">
-                  {icon}
-                </span>
-                <p className="text-deep-purple dark:text-off-white text-sm font-medium">
-                  {label}
-
-                </p>
-
-                
-              </a>
-            ))}
-          </nav>
-        </div>
-
-        {/* Bottom Section */}
-        <div className="flex flex-col gap-4">
-          <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/30">
-            Chat with an Expert
-          </button>
-
-          <div className="flex items-center gap-3 px-3 py-2 border-t border-light-grey/50 dark:border-white/10 pt-4">
-            <div
-              className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
-              style={{
-                backgroundImage:
-                  "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBS5qr6qwbp_Co_EcTAicH0w3a-LX0koO9FF69NEygw7sgkbepmboIGn27Fr4pY50UajG234NBWGErWCPlE-eqFGQ6roiCPi9vJPHQ27L0HHQSihYn9kBBDnhsBnOqsNJ9ggtGigr-62nTPdaeLIiBanAYdImWmfxuyQe2Qa8h3u1_SbffW8vVd7c9Dm7IIjFiq8Rm54MmLQBD6aurFUEzINZypdJ_-Qm_HqeZF7EotnWhfWsEb_cT9snXl3LU5TmAf9fqliAVcA9AC')",
-              }}
-            ></div>
-
-            <div className="flex flex-col">
-              <p className="text-deep-purple dark:text-off-white text-sm font-medium">
-                Anita Sharma
-              </p>
-              <a
-                href="#"
-                className="text-deep-purple/70 dark:text-off-white/70 text-xs hover:underline"
-              >
-                View Profile
-              </a>
-            </div>
-
-            <span className="material-symbols-outlined ml-auto text-deep-purple/70 dark:text-off-white/70">
-              settings
-            </span>
-          </div>
-        </div>
-      </aside>
 
       {/* Main Area */}
       <main className="flex-1 flex flex-col">
@@ -173,14 +87,13 @@ export default function Dashboard() {
             </div>
           </section>
 
-          {/* New for you */}
+          {/* New for You */}
           <section className="mt-8">
             <h2 className="text-deep-purple dark:text-off-white text-[22px] font-bold px-4 pb-3 pt-5">
               New for You
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
-              {/* Card 1 */}
               {[
                 {
                   label: "New Course",
@@ -227,7 +140,7 @@ export default function Dashboard() {
 
                   <button className="flex mt-auto w-full justify-center rounded-full h-9 px-4 bg-soft-lavender dark:bg-white/10 text-deep-purple dark:text-off-white text-sm font-medium">
                     {card.button}
-                  </button>e learning
+                  </button>
                 </div>
               ))}
             </div>
@@ -272,8 +185,10 @@ export default function Dashboard() {
               </div>
             </div>
           </section>
+
         </div>
       </main>
+    </div>
     </div>
   );
 }
