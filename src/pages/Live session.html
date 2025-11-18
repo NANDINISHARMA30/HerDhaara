@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HerDhara - Live Class</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#A78BFA", // Lilac Purple
+                        "background-light": "#F5F3FF", // Light Lilac
+                        "background-dark": "#1C1B22",
+                        "accent": "#6D28D9", // Deeper Purple
+                        "text-light": "#1E1B29",
+                        "text-dark": "#E9E7F2",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#2A2833",
+                        "muted-light": "#5C586B",
+                        "muted-dark": "#A5A0B5"
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 1,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="relative flex min-h-screen w-full flex-col">
+<header class="sticky top-0 z-10 w-full border-b border-black/10 dark:border-white/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="container mx-auto flex items-center justify-between whitespace-nowrap px-4 sm:px-6 lg:px-8 py-3">
+<div class="flex items-center gap-4">
+<div class="text-primary size-7">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736C36.9144 31.2278 39.9967 32.7669 41.3563 33.8352L24.8486 7.36089C24.4571 6.73303 23.5429 6.73303 23.1514 7.36089L6.64374 33.8352C8.00331 32.7669 11.0856 31.2278 13.8261 30.5736Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M39.998 35.764C39.9944 35.7463 39.9875 35.7155 39.9748 35.6706C39.9436 35.5601 39.8949 35.4259 39.8346 35.2825C39.8168 35.2403 39.7989 35.1993 39.7813 35.1602C38.5103 34.2887 35.9788 33.0607 33.7095 32.5189C30.9875 31.8691 27.6413 31.4783 24 31.4783C20.3587 31.4783 17.0125 31.8691 14.2905 32.5189C12.0012 33.0654 9.44505 34.3104 8.18538 35.1832C8.17384 35.2075 8.16216 35.233 8.15052 35.2592C8.09919 35.3751 8.05721 35.4886 8.02977 35.589C8.00356 35.6848 8.00039 35.7333 8.00004 35.7388C8.00004 35.739 8 35.7393 8.00004 35.7388C8.00004 35.7641 8.0104 36.0767 8.68485 36.6314C9.34546 37.1746 10.4222 37.7531 11.9291 38.2772C14.9242 39.319 19.1919 40 24 40C28.8081 40 33.0758 39.319 36.0709 38.2772C37.5778 37.7531 38.6545 37.1746 39.3151 36.6314C39.9006 36.1499 39.9857 35.8511 39.998 35.764ZM4.95178 32.7688L21.4543 6.30267C22.6288 4.4191 25.3712 4.41909 26.5457 6.30267L43.0534 32.777C43.0709 32.8052 43.0878 32.8338 43.104 32.8629L41.3563 33.8352C43.104 32.8629 43.1038 32.8626 43.104 32.8629L43.1051 32.865L43.1065 32.8675L43.1101 32.8739L43.1199 32.8918C43.1276 32.906 43.1377 32.9246 43.1497 32.9473C43.1738 32.9925 43.2062 33.0545 43.244 33.1299C43.319 33.2792 43.4196 33.489 43.5217 33.7317C43.6901 34.1321 44 34.9311 44 35.7391C44 37.4427 43.003 38.7775 41.8558 39.7209C40.6947 40.6757 39.1354 41.4464 37.385 42.0552C33.8654 43.2794 29.133 44 24 44C18.867 44 14.1346 43.2794 10.615 42.0552C8.86463 41.4464 7.30529 40.6757 6.14419 39.7209C4.99695 38.7775 3.99999 37.4427 3.99999 35.7391C3.99999 34.8725 4.29264 34.0922 4.49321 33.6393C4.60375 33.3898 4.71348 33.1804 4.79687 33.0311C4.83898 32.9556 4.87547 32.8935 4.9035 32.8471C4.91754 32.8238 4.92954 32.8043 4.93916 32.7889L4.94662 32.777L4.95178 32.7688ZM35.9868 29.004L24 9.77997L12.0131 29.004C12.4661 28.8609 12.9179 28.7342 13.3617 28.6282C16.4281 27.8961 20.0901 27.4783 24 27.4783C27.9099 27.4783 31.5719 27.8961 34.6383 28.6282C35.082 28.7342 35.5339 28.8609 35.9868 29.004Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold tracking-tight">HerDhara</h2>
+</div>
+<div class="flex flex-1 items-center justify-end gap-6">
+<a class="hidden sm:block text-base font-medium hover:text-primary" href="#">Home</a>
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-surface-light dark:bg-surface-dark text-text-light dark:text-text-dark shadow-sm">
+<span class="material-symbols-outlined text-2xl">person</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2">
+<div class="relative aspect-video w-full overflow-hidden rounded-xl bg-gray-900 shadow-lg">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover" data-alt="Anjali Sharma presenting in a virtual class setting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBxp5LemMrW6UjsGPpaG4D8R0k0hfh75ULhoL_R4Ss3OJ2yP4k2sU0Mek58ikNHQj2Qlg4UG9b4R_QO08b-1SS2pIMGvpbWjJUE7eSSbO6W-KjXTXC8xrPmIaIOrAcsIqevMR2Pd9esnpPZ09ijy1CcsNHzNZSoV3lQt8yaxjNI1ztOzFmvPR-tg-JAuGG7xIM1AGr0KPJg4lJle4FH53FJ6SEGcA4vEuzhA6N15eW5g4r3QGq7oVJqY_hyispRqVkaYj4QgkIIfV7f");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute inset-x-0 bottom-0 p-4 sm:p-6 text-white">
+<div class="w-full group">
+<div class="relative h-2 w-full cursor-pointer touch-none">
+<div class="absolute left-0 top-1/2 h-1 w-full -translate-y-1/2 rounded-full bg-white/20">
+<div class="absolute h-full w-[65%] rounded-full bg-primary"></div>
+</div>
+<div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 h-4 w-4 rounded-full bg-primary shadow" style="left: 65%;"></div>
+</div>
+<div class="flex items-center justify-between text-xs font-medium text-gray-200 mt-2">
+<span>28:15</span>
+<span>45:00</span>
+</div>
+</div>
+<div class="mt-2 flex items-center justify-between">
+<div class="flex items-center gap-2 sm:gap-4">
+<button class="p-2 rounded-full hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-3xl">replay_10</span>
+</button>
+<button class="p-3 bg-primary rounded-full hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-4xl">play_arrow</span>
+</button>
+<button class="p-2 rounded-full hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-3xl">forward_10</span>
+</button>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-2xl">volume_up</span>
+</div>
+</div>
+<div class="flex items-center gap-2 sm:gap-4">
+<button class="p-2 rounded-full hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-2xl">closed_caption</span>
+</button>
+<button class="p-2 rounded-full hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-2xl">settings</span>
+</button>
+<button class="p-2 rounded-full hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-2xl">fullscreen</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6">
+<div class="flex flex-col sm:flex-row justify-between items-start gap-4">
+<div>
+<h1 class="text-3xl font-bold">Financial Literacy Basics</h1>
+<p class="text-lg text-muted-light dark:text-muted-dark mt-1">With Anjali Sharma</p>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-primary/20 text-primary dark:bg-primary/30 dark:text-text-dark font-bold hover:bg-primary/30 dark:hover:bg-primary/40">
+<span class="material-symbols-outlined text-xl">thumb_up</span>
+<span>Like</span>
+</button>
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-primary/20 text-primary dark:bg-primary/30 dark:text-text-dark font-bold hover:bg-primary/30 dark:hover:bg-primary/40">
+<span class="material-symbols-outlined text-xl">share</span>
+<span>Share</span>
+</button>
+</div>
+</div>
+<div class="mt-4 p-4 rounded-lg bg-surface-light dark:bg-surface-dark">
+<p class="text-muted-light dark:text-muted-dark">
+                                This live session covers the fundamentals of financial literacy, including budgeting, saving, and investing. Learn how to manage your money effectively and plan for a secure financial future. Perfect for beginners!
+                            </p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-1">
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-lg h-full flex flex-col">
+<div class="p-4 border-b border-black/10 dark:border-white/10 flex items-center justify-between">
+<h2 class="text-xl font-bold">Live Chat</h2>
+<p class="text-sm font-medium text-primary flex items-center gap-1.5">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
+</span>
+                                128 watching
+                            </p>
+</div>
+<div class="flex-grow p-4 space-y-4 overflow-y-auto h-96">
+<div class="flex items-start gap-3">
+<img alt="Sita avatar" class="w-8 h-8 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiYGqDfhZUVfa17LHqZZ6F4o4qlw_BiUGxZWUBxWH96cNQ2I3P2VA6p4DNqd84OYmUJvLnXkBMAfvyUix0i08J4JIWb6MT7Hd4dWr-xUtzWUSM3DUFW0aDwj5zmYlY5yldyjTlBjy-qFhN5UgkqhXHEbMEVQrmdnpVfoY_GXDdMVem56mLDgJTSXshQ7UDjRlMaauC-ezo1vwmXtqh5hQgSyII1dkZ5zanqIoLePA3Ta3a_NEfX_0pTkPOHIRGZd2yFdOi0VPQZIZ-"/>
+<div>
+<p class="text-sm font-bold">Sita</p>
+<p class="text-sm text-muted-light dark:text-muted-dark">This is so helpful, thank you Anjali ji!</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<img alt="Radha avatar" class="w-8 h-8 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlbVdsx3BkqJFnpuNr7rTs7QLHtvtaZVT3H_kJmmvbENN8GmJHrVPKFXuD2gtiwgNX7id3iApaz_8izhj7yghVDU-sr4FT_y9B53tFbJWgRVMOYWa1TriNRX-g0RvFyrt3H0IFP14joNxUEhMCXo2MwM-baMl7_9_w2GdY2R2lPLPCzZ0CjHxNiaTtKghJPczTg_WtLUB61pZ8CWzsH3MJhLzNslycufMpn16Vmqsd2dxL_MUGx8OPPKxR_ThNP_y6xfVVZY2f7w4v"/>
+<div>
+<p class="text-sm font-bold">Radha</p>
+<p class="text-sm text-muted-light dark:text-muted-dark">Can you explain the difference between saving and investing again?</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<img alt="Anjali Sharma avatar" class="w-8 h-8 rounded-full ring-2 ring-primary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6css8JutVAkDtbQtVXqtc2KOT_ZxUQGQ6mQaEubSWs846Xdlb6wtduUD4eXfaLiVb6h35w4yZTIWK-9fS1EEI8Jih6aHgSA1UGl8GwEeozazj4zYNTtmB_wQ-UzJwMFNT4d6sQ6ySw7wnTMEprxYRkgEWXIz5LmjFSyFQA7qEL40iVru10E1mIjcMjhJuoEJIRrM8-0ol94IYs4RrKV61qQOb0rLVv70KQeHKIsaWbHFR6_SICFVEP4XN_3hAYQrgqc0fCHogtR2p"/>
+<div>
+<p class="text-sm font-bold text-primary">Anjali Sharma (Instructor)</p>
+<p class="text-sm text-muted-light dark:text-muted-dark">Of course, Radha. Saving is for short-term goals, investing is for long-term growth.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<img alt="Priya avatar" class="w-8 h-8 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvGNFS5THtjdYh6C09wIL39BW6-vTDwbXvA8_aoLpkFplGkRXtAmBRBJ6tp9_c5n8IuR7QkI0d8EcWngUQZLbsvgx6KNue5_m2fyXydbVPhbDpfPygYmLyj5vG4yMxj7F0GJH-rtO6qtgM7m7ZAxI3pmAILh7LUuCqs_LatXUuEtKaRl4amYvJvgidXzM7E5UxmBlEyjRUUaIBNqLHvbfyeims7BzJIWyzKR52sQ1WT3Pv--ZVmMMLHUDYXiHr1gGWk9YQOT_YpcL2"/>
+<div>
+<p class="text-sm font-bold">Priya</p>
+<p class="text-sm text-muted-light dark:text-muted-dark">Great session!</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<img alt="Meena avatar" class="w-8 h-8 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-SukZqgVVifyKfM7WVRzmsO7ygYsXqlDvHh5wC2DMoK6kC8TrYYnBzGayh-J5SY8rFk661QtFHYDQxe4bifdCqly7QQgibtvNhyLD5XYlbcVt9IM8QqMSsRP23jjtA-uYUvqG-IdZ4fwlpRXzQlVNB8EQ_laGY_isA9LIOevtZvWZ4D9yjvxiSriDPTM9qgVbApG189lyDL9JPOB4M6-_6FOjWfMgbTSfetKAEhp5NUXE9Gcl2umGueVmPxpkXRMVQXX9qke8G8Ua"/>
+<div>
+<p class="text-sm font-bold">Meena</p>
+<p class="text-sm text-muted-light dark:text-muted-dark">Feeling much more confident about my finances now!</p>
+</div>
+</div>
+</div>
+<div class="p-4 border-t border-black/10 dark:border-white/10">
+<div class="flex items-center gap-2">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-full text-text-light dark:text-text-dark focus:outline-0 focus:ring-2 focus:ring-primary/50 border-none bg-background-light dark:bg-background-dark h-10 placeholder:text-muted-light dark:placeholder:text-muted-dark px-4 text-sm" placeholder="Say something..." value=""/>
+<button class="flex items-center justify-center shrink-0 w-10 h-10 rounded-full bg-primary text-white hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-xl">send</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>
