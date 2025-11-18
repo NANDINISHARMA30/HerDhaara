@@ -1,142 +1,164 @@
 import React from "react";
 
-export default function MarketPlace() {
+export default function MarketplaceScreen() {
   return (
-    <div className="relative flex min-h-screen w-full flex-col font-display 
-      bg-[var(--background-light)] text-[var(--text-light)] 
-      dark:bg-[var(--background-dark)] dark:text-[var(--text-dark)]">
-
-      {/* HEADER */}
-      <header className="sticky top-0 z-40 border-b 
-        border-[var(--border-light)] dark:border-[var(--border-dark)]
-        bg-[var(--background-light)]/80 dark:bg-[var(--background-dark)]/80 backdrop-blur-md">
-        
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="flex h-20 items-center justify-between">
-
-            {/* Logo */}
-            <div className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-[var(--primary)] text-4xl">spa</span>
-              <span className="text-2xl font-bold">HerDhara</span>
-            </div>
-
-            {/* Right Icons */}
-            <div className="flex items-center gap-4">
-              <button className="flex h-11 w-11 items-center justify-center rounded-full 
-                hover:bg-[var(--lavender-light)]/50 dark:hover:bg-white/10">
-                <span className="material-symbols-outlined">notifications</span>
-              </button>
-
-              <img
-                alt="User avatar"
-                className="h-11 w-11 rounded-full object-cover ring-2 ring-[var(--lavender-light)] dark:ring-[var(--lavender-dark)]"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM5KAgKEvx35CCv5MiKhn6roz57pyeKmeLZ0HNBxZSnnBardJjE9xcz1zRGArAzwuXYlAMhyd8sw2NIfe4-ZfvR4uVuBc-TX3-Fdj9uK3fnKgji-0YErhdis2UfF5iLVSMVOdQhMjpEPoHFLY1t4SGAEgdJwjH6shNVGZ9-lzFCUU7ddr8eBN3x23BArdUnyZjZ4rsbnZP_h7SqSSC-XtmCBRiF8p54D-C00rvfP1Pn9qlA4WI0s5wT7vmtLoJ4jMT0F474z9f2RxN"
-              />
-            </div>
+    <div className="bg-lighter font-display text-gray-900 min-h-screen">
+      {/* Navbar */}
+      <header className="sticky top-0 z-50 w-full bg-lighter/80 backdrop-blur-md border-b border-primary/20 px-6 py-3 flex justify-between items-center">
+        <div className="flex items-center gap-3">
+          <div className="h-10 w-10 rounded-xl bg-primary/20 flex items-center justify-center text-primary font-bold">
+            HD
           </div>
+          <h1 className="text-xl font-bold text-primary tracking-tight">
+            HerDhara
+          </h1>
+        </div>
+
+        <nav className="hidden md:flex items-center gap-8 text-sm">
+          <a className="hover:text-primary transition" href="#">
+            Home
+          </a>
+          <a className="text-primary font-semibold" href="#">
+            Marketplace
+          </a>
+          <a className="hover:text-primary transition" href="#">
+            Community
+          </a>
+          <a className="hover:text-primary transition" href="#">
+            Events
+          </a>
+        </nav>
+
+        <div className="flex items-center gap-3">
+          <input
+            className="hidden lg:block rounded-full px-4 py-2 border border-primary/30 bg-white text-sm focus:ring-primary focus:outline-none w-52"
+            placeholder="Search..."
+          />
+          <button className="h-10 w-10 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+            🛒
+          </button>
+          <button className="h-10 w-10 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+            🔔
+          </button>
         </div>
       </header>
 
-      {/* MAIN CONTENT */}
-      <main className="flex-1">
-        <div className="mx-auto max-w-7xl px-6 py-10 flex flex-col gap-12">
+      {/* Layout */}
+      <div className="flex">
+        {/* Sidebar */}
+        <aside className="hidden lg:block w-64 p-6">
+          <button className="w-full bg-primary text-white rounded-xl py-3 font-bold shadow hover:bg-primary/90 transition">
+            Sell Product
+          </button>
 
-          {/* TOP SELLERS */}
-          <section className="w-full">
-            <div className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory 
-              scrollbar-hide">
-              
-              {[ /* same sellers */ ].map((seller, idx) => (
-                <div
-                  key={idx}
-                  className="flex flex-col items-center w-20 gap-2 snap-center group"
-                >
-                  <div className="relative h-[70px] w-[70px] rounded-full p-[3px]
-                    bg-gradient-to-br from-[var(--lavender-light)] via-[var(--lavender)] to-[var(--lavender-dark)]
-                    group-hover:scale-105 transition">
-                    <img
-                      alt={seller.name}
-                      src={seller.img}
-                      className="h-full w-full rounded-full object-cover border border-white"
-                    />
-                  </div>
-                  <p className="text-sm font-medium truncate">{seller.name}</p>
-                </div>
-              ))}
+          <div className="mt-8">
+            <h3 className="font-bold text-gray-800 mb-3 px-2">Categories</h3>
+
+            <div className="space-y-2">
+              <a
+                className="flex items-center gap-3 px-3 py-2 rounded-xl bg-primary/10 text-primary font-semibold"
+                href="#"
+              >
+                All Products
+              </a>
+
+              <a
+                className="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-soft transition"
+                href="#"
+              >
+                Handicrafts
+              </a>
+
+              <a
+                className="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-soft transition"
+                href="#"
+              >
+                Textiles
+              </a>
+
+              <a
+                className="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-soft transition"
+                href="#"
+              >
+                Farm Produce
+              </a>
+
+              <a
+                className="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-soft transition"
+                href="#"
+              >
+                Art
+              </a>
             </div>
-          </section>
+          </div>
+        </aside>
 
-          {/* FEATURED PRODUCT */}
-          <section className="w-full flex justify-center">
-            <div className="relative h-[520px] w-full max-w-sm">
+        {/* Main Content */}
+        <main className="flex-1 p-6">
+          {/* Hero Banner */}
+          <div
+            className="rounded-xl overflow-hidden h-64 bg-cover bg-center shadow-lg relative"
+            style={{
+              backgroundImage:
+                "url('https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6')",
+            }}
+          >
+            <div className="absolute inset-0 bg-black/40"></div>
 
-              {/* Lavender soft shadow layers */}
-              <div className="absolute inset-0 scale-95 translate-y-4 rounded-xl 
-                bg-[var(--lavender-light)]/40 shadow-lg"></div>
-              <div className="absolute inset-0 scale-90 translate-y-8 rounded-xl 
-                bg-[var(--lavender-light)]/60 shadow-xl"></div>
-
-              <div className="relative z-20 h-full w-full rounded-xl overflow-hidden shadow-2xl">
-                <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCPMixn-37qqHZh2oAWpEwaVEMeVJZyIgyDWHQIDxXCpveoyj6ANBWqt6rlf_R2bjcAcf-zK-6zwMRWVf5Sm4Ul24tDawUXuLxOfPxZPLqaZbGFIvj0IVsCVKABC0guwVHPpnupMwF0jbG3m7ObulEjPGPmnOmRAkilEsn3DwC4B9BP5WxQ_vX206GgC519z6-QCQDzQ9KU7eBaFd1XFKFDCkJApzZDBYwALvV4QGlHjOjFTE8ifyukd0kHdXJ_tqE_y4gQ7lx5kxs"
-                  className="absolute inset-0 h-full w-full object-cover"
-                />
-
-                <div className="absolute inset-0 bg-gradient-to-t 
-                  from-black/70 via-black/40 to-transparent"></div>
-
-                <div className="absolute bottom-0 p-6 z-30 text-white">
-                  <h2 className="text-3xl font-bold">Hand-painted Plate</h2>
-                  <p className="opacity-90 mt-1">by Geeta S.</p>
-
-                  <p className="text-sm opacity-80 mt-2">
-                    A beautifully crafted ceramic plate with traditional motifs.
-                  </p>
-
-                  <div className="flex gap-4 mt-6">
-
-                    <button className="h-14 w-14 flex items-center justify-center rounded-full 
-                      bg-white/10 text-red-300 hover:bg-white/20">
-                      <span className="material-symbols-outlined text-3xl">close</span>
-                    </button>
-
-                    <button className="flex-1 flex items-center justify-center gap-2 
-                      bg-[var(--primary)] py-4 rounded-full text-lg font-bold text-white 
-                      hover:scale-[1.03] transition">
-                      <span className="material-symbols-outlined">shopping_cart</span>
-                      View Product
-                    </button>
-
-                    <button className="h-14 w-14 flex items-center justify-center rounded-full 
-                      bg-white/10 text-pink-300 hover:bg-white/20">
-                      <span className="material-symbols-outlined text-3xl">favorite</span>
-                    </button>
-
-                  </div>
-                </div>
-              </div>
+            <div className="absolute bottom-6 left-6 text-white">
+              <h2 className="text-3xl font-bold">Featured Artisan of the Week</h2>
+              <p className="opacity-90">Discover handcrafted excellence</p>
             </div>
-          </section>
+          </div>
 
-          {/* WELCOME SECTION */}
-          <section>
-            <h1 className="text-3xl font-bold">Welcome back, Anita!</h1>
+          {/* Trending Products */}
+          <h2 className="text-2xl font-bold mt-10 mb-4 text-primary">
+            Trending Products
+          </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-              <div className="h-40 rounded-xl p-6 bg-[var(--lavender-light)] shadow hover:shadow-md">
-                New Courses
-              </div>
-              <div className="h-40 rounded-xl p-6 bg-[var(--lavender-light)] shadow hover:shadow-md">
-                Featured Products
-              </div>
-              <div className="h-40 rounded-xl p-6 bg-[var(--lavender-light)] shadow hover:shadow-md">
-                Community Hub
+          <div className="flex gap-6 overflow-x-auto pb-4">
+            {/* Product Card 1 */}
+            <div className="min-w-[240px] bg-white rounded-xl shadow hover:shadow-lg transition border border-primary/10">
+              <div
+                className="h-40 bg-cover bg-center rounded-t-xl"
+                style={{
+                  backgroundImage:
+                    "url('https://images.unsplash.com/photo-1584917865442-de89df76afd3')",
+                }}
+              ></div>
+
+              <div className="p-4">
+                <p className="font-semibold text-gray-800">Painted Vase</p>
+                <p className="text-gray-500 text-sm">₹850</p>
+
+                <button className="w-full mt-3 bg-primary/10 text-primary font-bold py-2 rounded-full hover:bg-primary/20 transition">
+                  Buy Now
+                </button>
               </div>
             </div>
-          </section>
 
-        </div>
-      </main>
+            {/* Product Card 2 */}
+            <div className="min-w-[240px] bg-white rounded-xl shadow hover:shadow-lg transition border border-primary/10">
+              <div
+                className="h-40 bg-cover bg-center rounded-t-xl"
+                style={{
+                  backgroundImage:
+                    "url('https://images.unsplash.com/photo-1600185365483-26d7a4a1da6c')",
+                }}
+              ></div>
+
+              <div className="p-4">
+                <p className="font-semibold text-gray-800">Silk Scarf</p>
+                <p className="text-gray-500 text-sm">₹1200</p>
+
+                <button className="w-full mt-3 bg-primary/10 text-primary font-bold py-2 rounded-full hover:bg-primary/20 transition">
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
     </div>
   );
 }

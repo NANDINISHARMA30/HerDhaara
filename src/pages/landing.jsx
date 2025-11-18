@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 export default function HerDhara() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   return (
     <div className="font-display bg-[#F9F5FF] text-[#4b3f55] dark:text-text-dark">
       <>
@@ -13,38 +13,44 @@ export default function HerDhara() {
           <div aria-hidden="true" className="absolute top-0 left-0 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#EAD8FF]/50 blur-3xl"></div>
           <div aria-hidden="true" className="absolute bottom-0 right-0 h-96 w-96 translate-x-1/2 translate-y-1/2 rounded-full bg-[#D6C7FF]/40 blur-3xl"></div>
 
-          {/* Header */}
-          <header className="absolute top-0 left-0 right-0 z-10 p-4 sm:p-6 backdrop-blur-md">
-            <div className="mx-auto max-w-6xl">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <span className="material-symbols-outlined text-[#9b5de5] text-3xl">spa</span>
-                  <span className="text-xl font-bold">HerDhara</span>
-                </div>
+          <header className="sticky top-0 z-50 w-full bg-lighter/80 backdrop-blur-md border-b border-primary/20 px-6 py-3 flex justify-between items-center">
+        <div className="flex items-center gap-3">
+          <div className="h-10 w-10 rounded-xl bg-primary/20 flex items-center justify-center text-primary font-bold">
+            HD
+          </div>
+          <h1 className="text-xl font-bold text-primary tracking-tight">
+            HerDhara
+          </h1>
+        </div>
 
-                <button onClick={()=>navigate("/dashboard")} className="hidden sm:block text-[#6d5d84] hover:text-[#9b5de5] transition-colors text-sm font-medium">
-                  Home
-                </button>
-                <button onClick={()=>navigate("/catalog")} className="hidden sm:block text-[#6d5d84] hover:text-[#9b5de5] transition-colors text-sm font-medium">
-                  Courses
-                </button>
-                <button onClick={()=>navigate("/market")} className="hidden sm:block text-[#6d5d84] hover:text-[#9b5de5] transition-colors text-sm font-medium">
-                  MarketPlace
-                </button>
-                <button onClick={()=>navigate("/")} className="hidden sm:block text-[#6d5d84] hover:text-[#9b5de5] transition-colors text-sm font-medium">
-                  Home
-                </button>
+        <nav className="hidden md:flex items-center gap-8 text-sm">
+          <a className="hover:text-primary transition" href="/dashboard">
+            Home
+          </a>
+          <a className="text-primary font-semibold" href="#">
+            Marketplace
+          </a>
+          <a className="hover:text-primary transition" href="#">
+            Community
+          </a>
+          <a className="hover:text-primary transition" href="#">
+            Events
+          </a>
+        </nav>
 
-                <div className="flex items-center">
-                  <Link to="/signup">
-                    <button className="h-12 px-6 bg-gradient-to-r from-[#d8b4fe] to-[#c084fc] text-white font-semibold rounded-full shadow-lg hover:opacity-90 transition-opacity">
-                      Sign In
-                    </button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </header>
+        <div className="flex items-center gap-3">
+          <input
+            className="hidden lg:block rounded-full px-4 py-2 border border-primary/30 bg-white text-sm focus:ring-primary focus:outline-none w-52"
+            placeholder="Search..."
+          />
+          <button className="h-10 w-10 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+            🛒
+          </button>
+          <button className="h-10 w-10 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+            🔔
+          </button>
+        </div>
+      </header>
 
           {/* Main */}
           <main className="flex h-full grow flex-col">
