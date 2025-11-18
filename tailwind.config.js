@@ -13,7 +13,7 @@ export default {
         "background-dark": "#1c1121",
         lilac: "#C8A2C8",
         "soft-lavender": "#E6E6FA",
-        "deep-purple": "#483248",
+        // "deep-purple": "#483248",
         "off-white": "#F9F7F9",
         "light-grey": "#DCDCDC",
       },

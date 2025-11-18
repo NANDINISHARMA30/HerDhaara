@@ -2,7 +2,7 @@ import React from "react";
 
 export default function LiveClassPage() {
   return (
-    <div className="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark min-h-screen">
+    <div className="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark min-h-screen text-white">
       {/* HEADER */}
       <header className="sticky top-0 z-10 w-full border-b border-black/10 dark:border-white/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
         <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-3">
