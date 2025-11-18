@@ -50,7 +50,10 @@ export default function Dashboard() {
                 </span>
                 <p className="text-deep-purple dark:text-off-white text-sm font-medium">
                   {label}
+
                 </p>
+
+                
               </a>
             ))}
           </nav>
@@ -224,7 +227,7 @@ export default function Dashboard() {
 
                   <button className="flex mt-auto w-full justify-center rounded-full h-9 px-4 bg-soft-lavender dark:bg-white/10 text-deep-purple dark:text-off-white text-sm font-medium">
                     {card.button}
-                  </button>
+                  </button>e learning
                 </div>
               ))}
             </div>

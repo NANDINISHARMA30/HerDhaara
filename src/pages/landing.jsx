@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";  
 
 export default function HerDhara() {
   return (
@@ -21,12 +22,16 @@ export default function HerDhara() {
                   <span className="text-xl font-bold">HerDhara</span>
                 </div>
 
+                <button className="hidden sm:block text-slate-700 dark:text-black hover:text-primary-darker transition-colors text-sm font-medium">Home</button>
+
+
+
                 <div className="flex items-center">
-                  <button className="flex items-center gap-2 rounded-full px-4 py-2 hover:bg-black/5 dark:hover:bg-white/5">
-                    <span className="material-symbols-outlined text-lg">language</span>
-                    <span className="text-sm font-medium">English</span>
-                    <span className="material-symbols-outlined text-lg">expand_more</span>
-                  </button>
+                  <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-5 bg-gradient-to-r from-primary to-secondar  text-pink text-base font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity shadow-lg shadow-primary/20">
+                       <Link to="/signup"> 
+                        <span className="truncate">Sign In</span>
+                         </Link>
+                      </button>
                 </div>
               </div>
             </div>
@@ -52,9 +57,9 @@ export default function HerDhara() {
                       </div>
 
                       <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-5 bg-gradient-to-r from-primary to-secondar  text-pink text-base font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity shadow-lg shadow-primary/20">
-                       {/* <Link to="/Dashboard"> */}
+                       <Link to="/Dashboard">
                         <span className="truncate">Get Started</span>
-                        {/* </Link> */}
+                        </Link>
                       </button>
                     </div>
 
@@ -123,7 +128,7 @@ export default function HerDhara() {
 
                 <div className="w-full max-w-6xl">
                   <p className="text-text-muted-light dark:text-text-muted-dark text-sm font-normal leading-normal pb-3 pt-1 px-4 text-center">
-                    Already have an account? <a className="font-bold text-primary underline" href="#">Sign In</a>
+                    Already have an account? <a className="font-bold text-primary underline" href="/signup">Sign In</a>
                   </p>
                 </div>
               </div>
