@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HerDhara - Teacher Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#A78BFA",
+              "secondary": "#C4B5FD",
+              "background-light": "#F5F3FF",
+              "background-dark": "#1F2937",
+              "text-headings": "#4C1D95",
+              "text-body": "#6B7280",
+            },
+            fontFamily: {
+              "display": ["Lexend"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-body">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-gray-200 dark:border-b-gray-700 px-4 sm:px-10 md:px-20 lg:px-40 py-3 bg-white dark:bg-background-dark shadow-sm">
+<div class="flex items-center gap-4 text-text-headings dark:text-gray-200">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736C36.9144 31.2278 39.9967 32.7669 41.3563 33.8352L24.8486 7.36089C24.4571 6.73303 23.5429 6.73303 23.1514 7.36089L6.64374 33.8352C8.00331 32.7669 11.0856 31.2278 13.8261 30.5736Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M39.998 35.764C39.9944 35.7463 39.9875 35.7155 39.9748 35.6706C39.9436 35.5601 39.8949 35.4259 39.8346 35.2825C39.8168 35.2403 39.7989 35.1993 39.7813 35.1602C38.5103 34.2887 35.9788 33.0607 33.7095 32.5189C30.9875 31.8691 27.6413 31.4783 24 31.4783C20.3587 31.4783 17.0125 31.8691 14.2905 32.5189C12.0012 33.0654 9.44505 34.3104 8.18538 35.1832C8.17384 35.2075 8.16216 35.233 8.15052 35.2592C8.09919 35.3751 8.05721 35.4886 8.02977 35.589C8.00356 35.6848 8.00039 35.7333 8.00004 35.7388C8.00004 35.739 8 35.7393 8.00004 35.7388C8.00004 35.7641 8.0104 36.0767 8.68485 36.6314C9.34546 37.1746 10.4222 37.7531 11.9291 38.2772C14.9242 39.319 19.1919 40 24 40C28.8081 40 33.0758 39.319 36.0709 38.2772C37.5778 37.7531 38.6545 37.1746 39.3151 36.6314C39.9006 36.1499 39.9857 35.8511 39.998 35.764ZM4.95178 32.7688L21.4543 6.30267C22.6288 4.4191 25.3712 4.41909 26.5457 6.30267L43.0534 32.777C43.0709 32.8052 43.0878 32.8338 43.104 32.8629L41.3563 33.8352C43.104 32.8629 43.1038 32.8626 43.104 32.8629L43.1051 32.865L43.1065 32.8675L43.1101 32.8739L43.1199 32.8918C43.1276 32.906 43.1377 32.9246 43.1497 32.9473C43.1738 32.9925 43.2062 33.0545 43.244 33.1299C43.319 33.2792 43.4196 33.489 43.5217 33.7317C43.6901 34.1321 44 34.9311 44 35.7391C44 37.4427 43.003 38.7775 41.8558 39.7209C40.6947 40.6757 39.1354 41.4464 37.385 42.0552C33.8654 43.2794 29.133 44 24 44C18.867 44 14.1346 43.2794 10.615 42.0552C8.86463 41.4464 7.30529 40.6757 6.14419 39.7209C4.99695 38.7775 3.99999 37.4427 3.99999 35.7391C3.99999 34.8725 4.29264 34.0922 4.49321 33.6393C4.60375 33.3898 4.71348 33.1804 4.79687 33.0311C4.83898 32.9556 4.87547 32.8935 4.9035 32.8471C4.91754 32.8238 4.92954 32.8043 4.93916 32.7889L4.94662 32.777L4.95178 32.7688ZM35.9868 29.004L24 9.77997L12.0131 29.004C12.4661 28.8609 12.9179 28.7342 13.3617 28.6282C16.4281 27.8961 20.0901 27.4783 24 27.4783C27.9099 27.4783 31.5719 27.8961 34.6383 28.6282C35.082 28.7342 35.5339 28.8609 35.9868 29.004Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-text-headings dark:text-gray-200 text-lg font-bold leading-tight tracking-[-0.015em]">HerDhara</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end items-center gap-8">
+<div class="flex items-center gap-9">
+<a class="text-text-headings dark:text-gray-300 text-sm font-medium leading-normal" href="#">Home</a>
+<a class="text-text-headings dark:text-gray-300 text-sm font-medium leading-normal" href="#">Find a Teacher</a>
+<a class="text-text-headings dark:text-gray-300 text-sm font-medium leading-normal" href="#">About Us</a>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Log In</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB7TmF3vW1EBkFQTSD9rXsnDP2DKDMDH1iMOgTf3zx43vAFso23wCT7od7mdctoazTZ7csuPUjJCHSs7TRdZ7YZH1AyF_rf3LrX3lEgbyOrF3YlBTAUYmJWZL9cFtPKSulJaCvTA1Mc6Lt_Y8ZJjr9jEe83azz_klG5MDpEabKhbpDrlWsKbGGqrP5--LatPuxs63xIL3RB-2v9d3aVJTgy0M1p6p-_K8GgunhVuCtPAqbdpaowojHTTHgJmCdDkDyA8X6JSY4qRbGC");'></div>
+</div>
+<button class="md:hidden text-text-headings dark:text-gray-200">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<main class="px-4 sm:px-10 md:px-20 lg:px-40 flex flex-1 justify-center py-5 md:py-10">
+<div class="layout-content-container flex flex-col w-full max-w-6xl flex-1">
+<div class="flex flex-wrap gap-2 p-4">
+<a class="text-text-body dark:text-gray-400 text-sm font-medium leading-normal" href="#">Home</a>
+<span class="text-text-body dark:text-gray-400 text-sm font-medium leading-normal">/</span>
+<a class="text-text-body dark:text-gray-400 text-sm font-medium leading-normal" href="#">Teachers</a>
+<span class="text-text-body dark:text-gray-400 text-sm font-medium leading-normal">/</span>
+<span class="text-text-headings dark:text-gray-200 text-sm font-medium leading-normal">Ananya Sharma</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-4">
+<aside class="lg:col-span-1 space-y-6">
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+<div class="flex flex-col items-center text-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32 border-4 border-primary" data-alt="Headshot of Ananya Sharma" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBHZH6vh9_Z2eU9Xn2r7-KAzR2nXx8r3EnsG149i9MVECq1PJIkUcyQpKHaUnQqveP7VzfhZcYG9ONO_zK7iJctu_F5AswIklX-T7nFqsopk-a1viUk8d6WNrLe23Pjyh31XD8ebEiivKODOJSYNthLlpV-Xwa-JKSBljepcNTKZWKeWvEAIh0Clujr0ViGGZovJh2YrOPRU3fzOWsF6Ir0HV6cRymg5KT38Dzoz6bVM0ZoTWwcVNViOyEozuswraCv5ZmXmKqml4qe");'></div>
+<div class="flex flex-col justify-center items-center">
+<h1 class="text-text-headings dark:text-gray-100 text-[22px] font-bold leading-tight tracking-[-0.015em]">Ananya Sharma</h1>
+<p class="text-text-body dark:text-gray-400 text-base font-normal leading-normal mt-1">Jaipur, Rajasthan</p>
+<div class="flex items-center gap-2 mt-2 bg-secondary/30 text-text-headings px-3 py-1 rounded-full text-sm font-medium">
+<span class="material-symbols-outlined text-sm text-primary">verified</span>
+<p class="text-primary dark:text-secondary">Verified Teacher</p>
+</div>
+</div>
+<div class="flex items-center gap-1 mt-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary">star_half</span>
+<span class="ml-2 text-text-body dark:text-gray-400 text-sm">(4.5 / 24 reviews)</span>
+</div>
+<div class="flex w-full flex-col gap-3 mt-4">
+<button class="flex min-w-[84px] w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-4 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Book a Session</span>
+</button>
+<button class="flex min-w-[84px] w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-4 bg-gray-100 dark:bg-gray-700 text-text-headings dark:text-gray-200 text-base font-bold leading-normal tracking-[0.015em] border border-gray-200 dark:border-gray-600">
+<span class="truncate">Contact Teacher</span>
+</button>
+</div>
+<div class="flex w-full justify-center gap-6 pt-4 border-t border-gray-200 dark:border-gray-700 mt-4">
+<div class="flex flex-col items-center gap-1 text-center cursor-pointer">
+<div class="rounded-full bg-gray-100 dark:bg-gray-700 p-2.5">
+<span class="material-symbols-outlined text-text-headings dark:text-gray-300">share</span>
+</div>
+<p class="text-text-body dark:text-gray-400 text-xs font-medium leading-normal">Share</p>
+</div>
+<div class="flex flex-col items-center gap-1 text-center cursor-pointer">
+<div class="rounded-full bg-gray-100 dark:bg-gray-700 p-2.5">
+<span class="material-symbols-outlined text-text-headings dark:text-gray-300">favorite</span>
+</div>
+<p class="text-text-body dark:text-gray-400 text-xs font-medium leading-normal">Save</p>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<div class="lg:col-span-2">
+<div class="bg-white dark:bg-slate-800 p-2 sm:p-4 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+<div class="pb-3">
+<div class="flex border-b border-gray-200 dark:border-gray-700 px-4 gap-8">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-primary text-primary pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">About</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-text-body dark:text-gray-400 pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Skills</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-text-body dark:text-gray-400 pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Reviews</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-text-body dark:text-gray-400 pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Pricing</p>
+</a>
+</div>
+</div>
+<div class="p-4 space-y-8">
+<section>
+<h3 class="text-lg font-bold text-text-headings dark:text-gray-100">About Ananya</h3>
+<p class="mt-2 text-text-body dark:text-gray-300 leading-relaxed">
+                                        Hello! I'm Ananya, a passionate educator from Jaipur with over 8 years of experience in community development and skill training. My mission is to empower women through education, helping them gain financial independence and confidence. I believe in a hands-on, supportive teaching approach where every student feels valued and understood. Join me to learn new skills in a friendly and encouraging environment!
+                                    </p>
+</section>
+<section>
+<h3 class="text-lg font-bold text-text-headings dark:text-gray-100">Skills &amp; Expertise</h3>
+<div class="flex flex-wrap gap-2 mt-3">
+<span class="bg-secondary/30 text-primary dark:text-secondary text-sm font-medium px-3 py-1 rounded-full">Digital Literacy</span>
+<span class="bg-secondary/30 text-primary dark:text-secondary text-sm font-medium px-3 py-1 rounded-full">Financial Planning</span>
+<span class="bg-secondary/30 text-primary dark:text-secondary text-sm font-medium px-3 py-1 rounded-full">Handicrafts</span>
+<span class="bg-secondary/30 text-primary dark:text-secondary text-sm font-medium px-3 py-1 rounded-full">Spoken English</span>
+<span class="bg-secondary/30 text-primary dark:text-secondary text-sm font-medium px-3 py-1 rounded-full">Business Communication</span>
+</div>
+</section>
+<section>
+<h3 class="text-lg font-bold text-text-headings dark:text-gray-100">Reviews from Students</h3>
+<div class="space-y-6 mt-4">
+<div class="border-b border-gray-200 dark:border-gray-700 pb-4">
+<div class="flex items-start gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 border-2 border-primary" data-alt="Reviewer avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD2UJHA17JA1zksM49b-aU_1myomDGC9E7Nb1Yb-IZLlRfBgq8n8Vzc3zrpUfrtcb0gI68lV6S2Sp6QHaMhG_9o2DFpSC--xtcR4vhW1T94oDvzAbLDB6FEJSTGBNKbtU7dCUCk0DEs8FRTUSXkI58K-SJ6qSakohnEAMn_vva4cie2otsLe_1ASIyvcOohl1I048PulOf6biiSFB5mZ6p8h19eX-9lXaHOmVQwvTXMENbmZ2kNEhvFMRv_znWW4QScLybvXQmixZNy");'></div>
+<div class="flex-1">
+<div class="flex justify-between items-center">
+<div>
+<p class="font-bold text-text-headings dark:text-gray-200">Priya K.</p>
+<p class="text-xs text-text-body dark:text-gray-400">July 2024</p>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="mt-2 text-text-body dark:text-gray-300">Ananya ma'am is an amazing teacher! Her classes on digital skills helped me start my own online business. She is very patient and explains everything clearly.</p>
+</div>
+</div>
+</div>
+<div class="border-b border-gray-200 dark:border-gray-700 pb-4">
+<div class="flex items-start gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 border-2 border-primary" data-alt="Reviewer avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCFo2TegGOKHri7ZiNilExUWiyYVS6zvVXgm_XzhAM1NaMVMz-TYJUtNgVPDGkd1rqDajv-dcqvvpU3yQrk_OAHw_rJC8RcqwMHi01d___M4zpfRbDB-ZcY20-VS2gv9CDSb3b6m-NUEsGrEeEP6RZ8KSzQ-rLFrScYfifWDpE2OaSp6Rib-u4fzOcZW8hN3BTfxdgGaPAINBgs2KOjpznkEzn3AHhGzf0Cj5J6NJfwfOyx73lrgcsKTNJVtMMSWyivD1XqeOG5AWQh");'></div>
+<div class="flex-1">
+<div class="flex justify-between items-center">
+<div>
+<p class="font-bold text-text-headings dark:text-gray-200">Rohit S.</p>
+<p class="text-xs text-text-body dark:text-gray-400">June 2024</p>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="mt-2 text-text-body dark:text-gray-300">The financial planning workshop was very useful. I now feel more confident managing my family's budget. Highly recommended.</p>
+</div>
+</div>
+</div>
+</div>
+<button class="mt-6 text-primary font-bold text-sm">Show all reviews</button>
+</section>
+<section>
+<h3 class="text-lg font-bold text-text-headings dark:text-gray-100">Services &amp; Pricing</h3>
+<div class="mt-4 space-y-4">
+<div class="flex justify-between items-center p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-background-light dark:bg-slate-700/50">
+<div>
+<p class="font-bold text-text-headings dark:text-gray-200">1-on-1 Mentoring Session</p>
+<p class="text-sm text-text-body dark:text-gray-400">60 minutes</p>
+</div>
+<p class="font-bold text-lg text-primary">₹500</p>
+</div>
+<div class="flex justify-between items-center p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-background-light dark:bg-slate-700/50">
+<div>
+<p class="font-bold text-text-headings dark:text-gray-200">Beginner's Digital Skills Workshop</p>
+<p class="text-sm text-text-body dark:text-gray-400">3 hours</p>
+</div>
+<p class="font-bold text-lg text-primary">₹1200</p>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>
