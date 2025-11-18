@@ -1,6 +1,31 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 
 export default function Signup() {
+  const videoRef = useRef(null);
+  const [cameraActive, setCameraActive] = useState(false);
+
+  useEffect(() => {
+    if (cameraActive) {
+      // Access the webcam
+      navigator.mediaDevices
+        .getUserMedia({ video: true, audio: false })
+        .then((stream) => {
+          if (videoRef.current) {
+            videoRef.current.srcObject = stream;
+            videoRef.current.play();
+          }
+        })
+        .catch((err) => console.error("Error accessing camera:", err));
+    } else {
+      // Stop the camera
+      if (videoRef.current && videoRef.current.srcObject) {
+        let tracks = videoRef.current.srcObject.getTracks();
+        tracks.forEach((track) => track.stop());
+        videoRef.current.srcObject = null;
+      }
+    }
+  }, [cameraActive]);
+
   return (
     <div className="font-display bg-background-light dark:bg-background-dark text-charcoal-gray dark:text-off-white min-h-screen">
       <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden">
@@ -39,15 +64,23 @@ export default function Signup() {
               {/* Main Content */}
               <main className="flex flex-1 items-center justify-center py-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full max-w-5xl">
-                  {/* Illustration */}
-                  <div className="hidden lg:flex items-center justify-center p-4">
-                    <div
-                      className="w-full h-full bg-center bg-no-repeat bg-contain"
-                      style={{
-                        backgroundImage:
-                          "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCR4LA4ilOVi3aBfDFprCJeJGot-_VJy4JESmh_m2IuoaFPYO5Yx90Ly6U4VLD3XLUZv4-EuGV7XJQ0QAcmdSN-PudJMg-3tYnXCRpPMnuk2Nzmu3bIAAmP0QJIrDbFG0Bd4MHICT6OrZqIVnvjPnrx__jmNUft2i7UKHuXJL3LRqU7PwQPDjN51h8mkWtz0RlFeR_ntY2RWrS3EOqujRJf1Ghg9dbDiqRyg7ABKvxrz2wUlUCpeJN_zE1xOTA2F7QlnHyol_Ei9NR1')",
-                      }}
-                    ></div>
+                  {/* Illustration / Camera Feed */}
+                  <div className="hidden lg:flex items-center justify-center p-4 flex-col gap-4">
+                    {!cameraActive ? (
+                      <button
+                        className="px-6 py-3 bg-primary text-white rounded-lg font-bold"
+                        onClick={() => setCameraActive(true)}
+                      >
+                        Activate Camera
+                      </button>
+                    ) : (
+                      <video
+                        ref={videoRef}
+                        className="w-full h-96 rounded-lg border border-gray-300"
+                        autoPlay
+                        muted
+                      />
+                    )}
                   </div>
 
                   {/* Form */}
@@ -55,30 +88,6 @@ export default function Signup() {
                     <h1 className="text-4xl font-bold pb-4">
                       Create Your Account
                     </h1>
-
-                    {/* Toggle Buttons */}
-                    <div className="flex py-3">
-                      <div className="flex h-14 flex-1 items-center justify-center rounded-full bg-lilac-subtle dark:bg-charcoal-gray/20 p-1.5">
-                        <label className="flex cursor-pointer h-full grow items-center justify-center rounded-full px-2 has-[:checked]:bg-primary has-[:checked]:text-white">
-                          <span>Sign Up</span>
-                          <input
-                            checked
-                            type="radio"
-                            name="auth"
-                            className="invisible w-0"
-                          />
-                        </label>
-
-                        <label className="flex cursor-pointer h-full grow items-center justify-center rounded-full px-2 has-[:checked]:bg-primary has-[:checked]:text-white">
-                          <span>Log In</span>
-                          <input
-                            type="radio"
-                            name="auth"
-                            className="invisible w-0"
-                          />
-                        </label>
-                      </div>
-                    </div>
 
                     {/* Inputs */}
                     <div className="flex flex-col gap-4 py-3">
@@ -109,41 +118,12 @@ export default function Signup() {
                           />
                         </div>
                       </div>
-
-                      {/* OTP */}
-                      <div>
-                        <p className="text-lg font-medium pb-2">
-                          One-Time Password (OTP)
-                        </p>
-                        <div className="flex items-center gap-4">
-                          <div className="relative flex-grow">
-                            <span className="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-primary text-2xl">
-                              password
-                            </span>
-                            <input
-                              className="form-input w-full rounded-lg bg-white dark:bg-charcoal-gray/30 h-16 pl-14 pr-4 border"
-                              placeholder="Enter OTP"
-                              type="number"
-                            />
-                          </div>
-                          <button className="rounded-lg h-16 px-6 bg-lilac-subtle text-primary text-lg font-bold">
-                            Get OTP
-                          </button>
-                        </div>
-                      </div>
                     </div>
 
                     {/* Submit */}
                     <button className="w-full rounded-lg h-16 px-6 bg-primary text-black text-xl font-bold shadow-lg mt-6">
-                      Verify & Create Account
+                      Create Account
                     </button>
-
-                    <p className="text-center text-gray-500 mt-6">
-                      Already have an account?{" "}
-                      <span className="font-bold text-primary cursor-pointer">
-                        Log In
-                      </span>
-                    </p>
                   </div>
                 </div>
               </main>
