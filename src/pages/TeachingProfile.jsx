@@ -2,7 +2,7 @@ import React from "react";
 
 export default function TeacherProfile() {
   return (
-    <div className="font-display bg-background-light dark:bg-background-dark text-text-body min-h-screen">
+    <div className="font-display bg-background-light dark:bg-background-dark text-text-body min-h-screen text-white">
       {/* HEADER */}
       <header className="flex items-center justify-between border-b border-gray-200 dark:border-gray-700 px-4 sm:px-10 md:px-20 lg:px-40 py-3 bg-white dark:bg-background-dark shadow-sm">
         <div className="flex items-center gap-4 text-text-headings dark:text-gray-200">
