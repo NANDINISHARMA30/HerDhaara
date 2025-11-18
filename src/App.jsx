@@ -4,6 +4,7 @@ import Signup from "./pages/signuppage.jsx";
 import Catalog from "./pages/catalog.jsx";
 import TeacherProfile from "./pages/TeachingProfile.jsx";
 import LiveClassPage from "./pages/Live session.jsx";
+import Dashboard from "./pages/counselling.jsx";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/teacher" element={<TeacherProfile/>} />
         <Route path="/catalog" element={<Catalog/>} />
         <Route path="/class" element={<LiveClassPage/>} />
+        <Route path="/dashboard" element={<Dashboard/>}/>
 
       </Routes>
     </BrowserRouter>
