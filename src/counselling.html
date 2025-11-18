@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dashboard - HerDhara</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c084fc",
+                        "background-light": "#fbfaff",
+                        "background-dark": "#1e1b23",
+                        "text-light": "#1c1921",
+                        "text-dark": "#fbfaff",
+                        "text-muted-light": "#7a7585",
+                        "text-muted-dark": "#b0aabb",
+                        "border-light": "#e9e5f2",
+                        "border-dark": "#3c3647"
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "1.5rem",
+                        "xl": "2rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<header class="sticky top-0 z-40 border-b border-border-light dark:border-border-dark bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="flex h-20 items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-4xl">spa</span>
+<span class="text-2xl font-bold">HerDhara</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="relative flex h-11 w-11 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/5">
+<span class="material-symbols-outlined text-text-light dark:text-text-dark !fill-0">notifications</span>
+</button>
+<button>
+<img alt="User avatar" class="h-11 w-11 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM5KAgKEvx35CCv5MiKhn6roz57pyeKmeLZ0HNBxZSnnBardJjE9xcz1zRGArAzwuXYlAMhyd8sw2NIfe4-ZfvR4uVuBc-TX3-Fdj9uK3fnKgji-0YErhdis2UfF5iLVSMVOdQhMjpEPoHFLY1t4SGAEgdJwjH6shNVGZ9-lzFCUU7ddr8eBN3x23BArdUnyZjZ4rsbnZP_h7SqSSC-XtmCBRiF8p54D-C00rvfP1Pn9qlA4WI0s5wT7vmtLoJ4jMT0F474z9f2RxN"/>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+<div class="flex flex-col gap-12">
+<section class="w-full">
+<div class="relative">
+<div class="flex snap-x snap-mandatory scroll-p-4 gap-6 overflow-x-auto pb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<a class="flex flex-none flex-col items-center justify-center gap-2.5 text-center w-20 group" href="#">
+<div class="relative flex h-[72px] w-[72px] flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-purple-400 to-violet-600 p-1 ring-2 ring-transparent ring-offset-2 ring-offset-background-light dark:ring-offset-background-dark transition-transform group-hover:scale-105">
+<img alt="Seller 1" class="h-full w-full rounded-full object-cover border-2 border-background-light dark:border-background-dark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW1RRY-k9UQ72xnZVLXSIPrkLokSXI7RChmCBKzsKXA2TfDkrgUn21TOruiWqowXJuqn-RH5npIZVhTL4CHjaAk3u86eQtBYPFnzf-GijVbdJ21TNTY9pk58gYt8r6vLNgDXn7zIz3QHUwub6Lqb3d3qT2e5RCHeUR3VZKt7CpbVUO9Z7E1hziubj1OBmvMNmYSOhConkSR5u_PBbmL7N_9I1IKi5mWSerFzQBDtQuOeX7DCUbEZrT5kPeb44UdBoIrKFXBriNrVye"/>
+</div>
+<p class="text-sm font-medium text-text-light dark:text-text-dark truncate">Priya S.</p>
+</a>
+<a class="flex flex-none flex-col items-center justify-center gap-2.5 text-center w-20 group" href="#">
+<div class="relative flex h-[72px] w-[72px] flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-purple-400 to-violet-600 p-1 ring-2 ring-transparent ring-offset-2 ring-offset-background-light dark:ring-offset-background-dark transition-transform group-hover:scale-105">
+<img alt="Seller 2" class="h-full w-full rounded-full object-cover border-2 border-background-light dark:border-background-dark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_NFO4cTF4-u3I9-xRJ_bZPo02A2fzau-bV1WKQsV3ucS6BFXwiat9LUnHkFv6hQlI7wmCt8OJAKgI-8zNGLRPpBEqdlbclR2dCK5TUC7JEJOtf6H1sPrPkcD8tzq7goj4c7URbndgCHJYV-QpIU9KqoeLxOhOJetR4AEOzn-ksPK3y7Gg8WBAkAv1VhQOZdFUOkBsArIxUNrcKkL1qtL0E8NHSeZg-nR3svRAaEq87Tle2a-LQaS9I7NfMOjKc35h7XSv6zCb2x_-"/>
+</div>
+<p class="text-sm font-medium text-text-light dark:text-text-dark truncate">Meena K.</p>
+</a>
+<a class="flex flex-none flex-col items-center justify-center gap-2.5 text-center w-20 group" href="#">
+<div class="relative flex h-[72px] w-[72px] flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-purple-400 to-violet-600 p-1 ring-2 ring-transparent ring-offset-2 ring-offset-background-light dark:ring-offset-background-dark transition-transform group-hover:scale-105">
+<img alt="Seller 3" class="h-full w-full rounded-full object-cover border-2 border-background-light dark:border-background-dark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDISQ3ngc21UkSsySWR3CnGZAuWp8_SMiSJXihsFOHBfPeKC3METtTO8kJxu0OcZLiv9sG62egGCLwcAdlDQtLoUk7jl3X6nmv9Ykch3IrH0ikL8A1sLG79QRD_aTJspUr-0yD50PmL5C-JTgbsbm_JxIN-sw0AYDjUWvKgcpHfzUkdQrLG44xmHphxlcCEyvoJATpL5tfeO0liGyyt-n-jxU3Ko5jdGvhO7fDTaX6eihAisMQEyA51J24TUnU8XQPPa3m4p9FR5pmN"/>
+</div>
+<p class="text-sm font-medium text-text-light dark:text-text-dark truncate">Sunita D.</p>
+</a>
+<a class="flex flex-none flex-col items-center justify-center gap-2.5 text-center w-20 group" href="#">
+<div class="relative flex h-[72px] w-[72px] flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-purple-400 to-violet-600 p-1 ring-2 ring-transparent ring-offset-2 ring-offset-background-light dark:ring-offset-background-dark transition-transform group-hover:scale-105">
+<img alt="Seller 4" class="h-full w-full rounded-full object-cover border-2 border-background-light dark:border-background-dark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeFvJ-5clNIIUr5KkZOCGIutQnoDzPAdEbOt6HBKaieYHcDn9qwJIRctd5lG8u3uzpb4uns1T8rEH0idKgZ-r-YpBNiuw4o42OY8QrR0GZSIKk17-NTyQSo3kE85s1Bzg4GKkcdXQpoMJu-eozcQfnOtTC-r6MKCFRf84PX3dMdLhdIxnm15ScP7PRbTTAnQf3SHJpibRe7sET0iJcNpMPYTmOO7SyXtGYcI7x6pAQNbasCtGkfO6zF1Pm7BCTEUV5KSVPoMMUpiGl"/>
+</div>
+<p class="text-sm font-medium text-text-light dark:text-text-dark truncate">Anjali M.</p>
+</a>
+<a class="flex flex-none flex-col items-center justify-center gap-2.5 text-center w-20 group" href="#">
+<div class="relative flex h-[72px] w-[72px] flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-purple-400 to-violet-600 p-1 ring-2 ring-transparent ring-offset-2 ring-offset-background-light dark:ring-offset-background-dark transition-transform group-hover:scale-105">
+<img alt="Seller 5" class="h-full w-full rounded-full object-cover border-2 border-background-light dark:border-background-dark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVAq5iVZw7sh4_sDQhwjTz28TTROeRS5Bal6-Bco-mwTdDZkR-shYO8BKNxzZ7AcqKxBhiwkPUPai-aSIBOaNOCvsXH2aYHqEOP1lDo6I_beWCY7WYmP1kKBwpQXmTghNnKDYam5Yyo-arSrHhi8-gvzrtgyvuxVik0z1SIZ9L7AoUM8m2q6wp7k9gBj0bLV3OfCSiYOu8hU43wPsJOvpFuPPU93_RQVJblP4ycW1rxFKLm2Qp-zp8pAGaDrGQ0ot-ub_9e1bXggFP"/>
+</div>
+<p class="text-sm font-medium text-text-light dark:text-text-dark truncate">Rekha P.</p>
+</a>
+<a class="flex flex-none flex-col items-center justify-center gap-2.5 text-center w-20 group" href="#">
+<div class="relative flex h-[72px] w-[72px] flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-purple-400 to-violet-600 p-1 ring-2 ring-transparent ring-offset-2 ring-offset-background-light dark:ring-offset-background-dark transition-transform group-hover:scale-105">
+<img alt="Seller 6" class="h-full w-full rounded-full object-cover border-2 border-background-light dark:border-background-dark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWox2t6l3LnDd06POCDwYGJjj0Nq15Mj0E50Y-ZDmpaJboMTl1c6ZG1ZK0MrOWKg5rDHRo9g3xVrFAXmXl7BJlxxWZ6k--IIk-E7JviMFdD3EWnVPOGyUfBEOvzeClkI2_SA2bljS4EUM0oa7ARvyG8NBRPoYZAUYBnK7TARuh8Q_yHDuzbW7vL-K_7WgSQLAYymjJObpgVsC-iEYe8MIql-ewFcE6m6XxNkOHHtkpZXgNl_W07K45VIdyrOcxHJPbGJJYYLDVzEIi"/>
+</div>
+<p class="text-sm font-medium text-text-light dark:text-text-dark truncate">Lalita R.</p>
+</a>
+<a class="flex flex-none flex-col items-center justify-center gap-2.5 text-center w-20 group" href="#">
+<div class="relative flex h-[72px] w-[72px] flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-purple-400 to-violet-600 p-1 ring-2 ring-transparent ring-offset-2 ring-offset-background-light dark:ring-offset-background-dark transition-transform group-hover:scale-105">
+<img alt="Seller 7" class="h-full w-full rounded-full object-cover border-2 border-background-light dark:border-background-dark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6QdcJBpOtDDrWx9kZZeUHgliFVKwjyUR7gyOpTN4f1kC1YlDrNE-iIZZqliJESUnuOh5UHgrxMPMy8iDLDVsLMrLFBvNeeQxGtlp0iVa3hbm-p9aLVE3zEol-3b6dGUvdt2g_I0Xk2eWfXZhiHjLgcYazs3WbMUGVEycz64deOLRvGTcQkChTukAKlOQl0mo5YkRaAe8mGZB0xXrXvjheV2eYsPDyMbX1YfSxeRUM8KwIB4c4nxrNRjQLj9B3ySTSaKgN2mp1ZpWY"/>
+</div>
+<p class="text-sm font-medium text-text-light dark:text-text-dark truncate">Geeta S.</p>
+</a>
+<a class="flex flex-none flex-col items-center justify-center gap-2.5 text-center w-20 group" href="#">
+<div class="relative flex h-[72px] w-[72px] flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-purple-400 to-violet-600 p-1 ring-2 ring-transparent ring-offset-2 ring-offset-background-light dark:ring-offset-background-dark transition-transform group-hover:scale-105">
+<img alt="Seller 8" class="h-full w-full rounded-full object-cover border-2 border-background-light dark:border-background-dark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB46M1Cwf42Yv3M2RYcORqni-J3wjR36DiUutuPYBTFFg9gCiVDruFrRjdSSKDD2ysitiFO87UCI-Xqwcja291s5wO39fdSKP54BlTw90IdcAlEGpeTiew5dqDicdkMFP-sv2pJ5SN3eTLhqltWgmwzhuixXDh778QWg2ddbHrRXoLVh0W_N9Dmi-R_wh1x2CTzP0yDw4RgkRQnn20TLtN3rE6_tvHsZWL9vHdXhx1Nz_MNNRglbv8Utxp28Kiqhjyy7LdmPH_dKZg8"/>
+</div>
+<p class="text-sm font-medium text-text-light dark:text-text-dark truncate">Rina V.</p>
+</a>
+</div>
+</div>
+</section>
+<section class="w-full">
+<div class="relative mx-auto flex h-[550px] w-full max-w-sm flex-col items-center justify-center">
+<div class="absolute inset-x-0 top-0 z-10 h-full origin-bottom scale-[0.9] rounded-xl bg-background-light/50 dark:bg-background-dark/50 shadow-lg" style="transform: translateY(2.5rem);"></div>
+<div class="absolute inset-x-0 top-0 z-20 h-full origin-bottom scale-[0.95] rounded-xl bg-background-light/70 dark:bg-background-dark/70 shadow-lg" style="transform: translateY(1.25rem);"></div>
+<div class="relative z-30 flex h-full w-full flex-col justify-end overflow-hidden rounded-xl bg-background-light dark:bg-background-dark shadow-2xl shadow-black/10">
+<img alt="Hand-painted decorative plate" class="absolute inset-0 z-0 h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCPMixn-37qqHZh2oAWpEwaVEMeVJZyIgyDWHQIDxXCpveoyj6ANBWqt6rlf_R2bjcAcf-zK-6zwMRWVf5Sm4Ul24tDawUXuLxOfPxZPLqaZbGFIvj0IVsCVKABC0guwVHPpnupMwF0jbG3m7ObulEjPGPmnOmRAkilEsn3DwC4B9BP5WxQ_vX206GgC519z6-QCQDzQ9KU7eBaFd1XFKFDCkJApzZDBYwALvV4QGlHjOjFTE8ifyukd0kHdXJ_tqE_y4gQ7lx5kxs"/>
+<div class="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+<div class="relative z-20 flex flex-col gap-6 p-6 text-white">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-3">
+<h2 class="text-3xl font-bold">Hand-painted Plate</h2>
+<div class="flex h-8 w-8 items-center justify-center rounded-full bg-blue-500 text-white">
+<span class="material-symbols-outlined text-xl">verified</span>
+</div>
+</div>
+<p class="text-base font-medium">by Geeta S.</p>
+<p class="text-sm font-light leading-relaxed text-white/90 line-clamp-2">A beautifully crafted ceramic plate, hand-painted with traditional motifs. Perfect for decoration or special occasions.</p>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex h-16 w-16 items-center justify-center rounded-full bg-white/10 text-red-400 backdrop-blur-sm transition-colors hover:bg-white/20">
+<span class="material-symbols-outlined !fill-0 text-4xl">close</span>
+</button>
+<button class="flex flex-grow items-center justify-center gap-2 rounded-full bg-primary py-4 px-6 text-lg font-bold text-white shadow-lg shadow-primary/30 transition-transform hover:scale-105">
+<span class="material-symbols-outlined !fill-0">shopping_cart</span>
+<span>View Product</span>
+</button>
+<button class="flex h-16 w-16 items-center justify-center rounded-full bg-white/10 text-green-400 backdrop-blur-sm transition-colors hover:bg-white/20">
+<span class="material-symbols-outlined !fill-0 text-4xl">favorite</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="flex w-full flex-col gap-8">
+<h1 class="text-3xl font-bold tracking-tight text-text-light dark:text-text-dark sm:text-4xl">Welcome back, Anita!</h1>
+<div class="grid grid-cols-1 gap-6 @container md:grid-cols-2 lg:grid-cols-3">
+<div class="flex flex-col gap-4 rounded-lg border border-border-light dark:border-border-dark bg-white dark:bg-background-dark p-6">
+<div class="flex items-center gap-4">
+<div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-3xl">lightbulb</span>
+</div>
+<div class="flex flex-col">
+<h3 class="text-lg font-bold text-text-light dark:text-text-dark">New Courses</h3>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">Expand your skills</p>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-3 rounded-md p-2 hover:bg-black/5 dark:hover:bg-white/5">
+<img alt="Course thumbnail for digital marketing" class="h-16 w-16 flex-shrink-0 rounded-md object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ4dvbJ-fxe1zrO1v0Yl0dO-fMMPkKmk4TIkNpLbuIWDxFsG-HS-zWWYRdegvRRV1GLgsazzLqbYW_aJKPViBxae5zmaiOkJPmDx0un4zYdi_vdiY08erQcz1vsEwXaNsRDO5mU5YuVoexstABU5iks7uHkROJmZUG9Cz8if2oYaAzVImLg6diMpWEO_6g5xCNJWmpxhIrv0lO2zkNpiKWdSLolWSS61qhHVAyU-mlLEbhk9NvqEqMbLX6kwDonvmPePymYvag8AKS"/>
+<div class="flex flex-col gap-1">
+<p class="text-sm font-semibold">Digital Marketing Basics</p>
+<p class="text-xs text-text-muted-light dark:text-text-muted-dark">by Priya Sharma</p>
+</div>
+</div>
+<div class="flex items-center gap-3 rounded-md p-2 hover:bg-black/5 dark:hover:bg-white/5">
+<img alt="Course thumbnail for financial literacy" class="h-16 w-16 flex-shrink-0 rounded-md object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0pdOocB2fC8I6E0wUxzBbZ0w4NiZlpghk33n8YAkzONC8BeFDJBZOImQNR4ivgK11VNWLtk4qKy_su4nRKtlq3lWJi1tsE5L385tjS351y_nN9DLPkY45Z1AtfCgGFRMhnidefjBTp7PcBIwBAbRrISWeI9f7Hw4wO-a_nK-R6Y90X35fRfruNcOe_ovhqsBsBk4vL_8CuwHu_2TXV8ccWrbC_bNXrUiB5eFwrz1xQPDOkdRIy6w90jSkz1JjJxeZ27y0Wn7HqKMb"/>
+<div class="flex flex-col gap-1">
+<p class="text-sm font-semibold">Financial Literacy 101</p>
+<p class="text-xs text-text-muted-light dark:text-text-muted-dark">by Rahul Verma</p>
+</div>
+</div>
+</div>
+<a class="text-sm font-bold text-primary self-start" href="#">View All Courses</a>
+</div>
+<div class="flex flex-col gap-4 rounded-lg border border-border-light dark:border-border-dark bg-white dark:bg-background-dark p-6">
+<div class="flex items-center gap-4">
+<div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-3xl">storefront</span>
+</div>
+<div class="flex flex-col">
+<h3 class="text-lg font-bold text-text-light dark:text-text-dark">Featured Products</h3>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">From our community</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-2">
+<div class="aspect-square w-full overflow-hidden rounded-md">
+<img alt="Handmade pottery" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoJcuSGrmazlu65eQTmgEbyhSdozTfUiGT-yB88tT9zeur0To7l18vZ1HYY5BUnSMnAeECwv5h8ExN3tMJTYio9ZFGgl5RoIM4n_1kI7lHm6oXqa_2buuc7QcbVJKh5-ywx7YF1o0Hgkl2naaaFAGADkjE6yZI2bhny-2vnKxWnm99Rx0XpZ8u-Tx6aQmiFVa3mPy6LsPmx3iiIOJC1jElUQbmBjzQm-O-i5ZhyI6JEQvId6bYndIN1VpD0cUwI5olizJEF90eZeH5"/>
+</div>
+<p class="text-sm font-semibold">Handmade Pottery</p>
+</div>
+<div class="flex flex-col gap-2">
+<div class="aspect-square w-full overflow-hidden rounded-md">
+<img alt="Embroidered textiles" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKE91GZxHgtI9BTxHiZ4KeAWBuASqRqQdnn8HU9F8sglcF8Q_-i6vcO6GWOtvfDiZM3Z9w7I8CZD-qMYEkk260YwKYE6CMugrkSDk7Zpq98vDRhLksfvEC_Kkh__vCr39PiPVxYXz2uIQqFdEDeB5fZlAH56n37h7VkjXNeiKmVAdzsFnDKITZXiZWaq5mJrjx4kNGXe5sl76PuxCGU40KbB-QyfXpTg7vVd15v4H0ExewCS_N_ojvmKxJdfD8wkP5UWXrsuaMjG1h"/>
+</div>
+<p class="text-sm font-semibold">Embroidered Textiles</p>
+</div>
+</div>
+<a class="text-sm font-bold text-primary self-start" href="#">Explore Marketplace</a>
+</div>
+<div class="flex flex-col gap-4 rounded-lg border border-border-light dark:border-border-dark bg-white dark:bg-background-dark p-6">
+<div class="flex items-center gap-4">
+<div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-3xl">groups</span>
+</div>
+<div class="flex flex-col">
+<h3 class="text-lg font-bold text-text-light dark:text-text-dark">Community Hub</h3>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">Connect and collaborate</p>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex items-start gap-3 rounded-md p-2 hover:bg-black/5 dark:hover:bg-white/5">
+<img alt="Profile picture of Sunita Devi" class="h-10 w-10 flex-shrink-0 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRi0u2Ol5MAA9z3EgAMQ4SlGmxhz3pL-9xuweYZwut-eTz4DOke0jbT9bR-1DNSCxhYKZ6d0coijjPKUk2XwqvdpcLWXKiCuvBxIhECSwvsEhA4WcvBsGqYHiiI_ILAPIbwTXguboxxdFG5FfJ3haRC1wdNeaJI4ciTBkopKbzhPqKW98O01cjfAW0sATiBEgEgeW3lRXccqJyygWV7MVkU0HuuRft1IQSsU7bRFfIcJSRJq6zqrN0tQjdEo5FH-ySq_B8CWwHGIK5"/>
+<div class="flex flex-col gap-1">
+<p class="text-sm font-semibold">Sunita Devi posted in "Artisans Unite"</p>
+<p class="text-xs text-text-muted-light dark:text-text-muted-dark">"Looking for feedback on my new designs!"</p>
+</div>
+</div>
+<div class="flex items-start gap-3 rounded-md p-2 hover:bg-black/5 dark:hover:bg-white/5">
+<img alt="Profile picture of Meera Singh" class="h-10 w-10 flex-shrink-0 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzA5KcPmJZ3N96NQRDa3T4PvDqStS_GIVD6BQUA6M7rkqEyEsz56p8DxxwvLBVyrxnZ_hzaM-fiaPDJ9UavmdeXtLLjclXD2wf_HFJZEAtYxX9hecOlXgsEovR8JyLVackuSERhWq8fHHpU2XXA5H-2Wb6FyMI6b8ut20tbyUnmX4IBTFpGHABXwTCmVPjOZO923uUvMYxLFN4vba2AK5STIhTrK7nhgZo_nY6OteSpYsSh_AD3FYn94mqARa5Tt0-MZDMnuKXfaQ5"/>
+<div class="flex flex-col gap-1">
+<p class="text-sm font-semibold">Meera Singh started a discussion</p>
+<p class="text-xs text-text-muted-light dark:text-text-muted-dark">"Tips for pricing handmade goods?"</p>
+</div>
+</div>
+</div>
+<a class="text-sm font-bold text-primary self-start" href="#">Join Discussion</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>
