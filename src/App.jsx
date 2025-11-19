@@ -6,7 +6,10 @@ import TeacherProfile from "./pages/TeachingProfile.jsx";
 import LiveClassPage from "./pages/Live session.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import UserManagement from "./pages/Admin/UserManagement.jsx";
-import Onboarding from "./pages/Onboarding.jsx";
+import Onboarding from "./pages/MarketPlace.jsx";
+import UploadScreen from "./pages/Upload.jsx";
+import MarketPlace from "./pages/MarketPlace.jsx";
+import CommunityHub from "./pages/Community";
 
 
 
@@ -17,13 +20,15 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HerDhara />} />
-        <Route path="/Dashboard" element={<Dashboard/>}/>\
+        <Route path="/dashboard" element={<Dashboard/>}/>\
 
         <Route path="/signup" element={<Signup/>} />
         <Route path="/teacher" element={<TeacherProfile/>} />
         <Route path="/catalog" element={<Catalog/>} />
         <Route path="/class" element={<LiveClassPage/>} />
-        <Route path="/onboarding" element={<Onboarding/>} />
+        <Route path="/market" element={<MarketPlace/>} />
+        <Route path="/upload" element={<UploadScreen/>} />
+        <Route path="/CommunityHub" element={<CommunityHub/>} />
         
 
       </Routes>
