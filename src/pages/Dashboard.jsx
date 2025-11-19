@@ -1,5 +1,6 @@
 import React from "react";
 import Sidebar from "./Sidebar.jsx";
+import Chatbot from "./Chatbot.jsx";
 
 export default function Dashboard() {
   return (
@@ -189,6 +190,7 @@ export default function Dashboard() {
         </div>
       </main>
     </div>
+    <Chatbot />
     </div>
   );
 }

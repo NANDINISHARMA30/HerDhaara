@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";  
+import { Link } from "react-router-dom"; 
+import Chatbot from "../pages/Chatbot"; 
 
 export default function HerDhara() {
   return (
@@ -136,6 +137,9 @@ export default function HerDhara() {
           </main>
         </div>
       </>
+      <Chatbot/>
+      
     </div>
   );
 }
+// GOOGLE_API_KEY=AIzaSyC8rI6RWKiB5onNZYOdT7O07MWF5rXKB6Y
