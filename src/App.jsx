@@ -10,6 +10,7 @@ import Onboarding from "./pages/MarketPlace.jsx";
 import UploadScreen from "./pages/Upload.jsx";
 import MarketPlace from "./pages/MarketPlace.jsx";
 import CommunityHub from "./pages/Community";
+import HerDharaCommunityHub from "./pages/Community";
 
 
 
@@ -28,7 +29,7 @@ function App() {
         <Route path="/class" element={<LiveClassPage/>} />
         <Route path="/market" element={<MarketPlace/>} />
         <Route path="/upload" element={<UploadScreen/>} />
-        <Route path="/CommunityHub" element={<CommunityHub/>} />
+        <Route path="/community" element={<HerDharaCommunityHub/>} />
         
 
       </Routes>
